@@ -99,8 +99,10 @@
             <h2>Update List</h2>
             <ul>
                 <li><strong>August 2024:</strong> Launched the new member sign-up system.</li>
-                <li><strong>July 2024:</strong> Updated the Terms Of Service with new policies.</li>
-                <li><strong>June 2024:</strong> Introduced new event types for increased engagement.</li>
+                <li><strong>August 2024:</strong> Updated the Terms Of Service with new policies.</li>
+                <li><strong>August 2024:</strong> Introduced new event types for increased engagement.</li>
+                <li><strong>August 2024:</strong> Created Invitations With Letters.</li>
+                <li><strong>August 2024:</strong> Created a Discord server</li>
             </ul>
         </section>
         <section id="contact" class="section">
