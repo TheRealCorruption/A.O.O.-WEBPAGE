@@ -88,8 +88,8 @@
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>For any inquiries or to get involved, please contact:</p>
-            <p>Email: [your-email@example.com]</p>
-            <p>Phone: [Your Phone Number]</p>
+            <p>Email: pumkintrue@gmail.com</p>
+            <p>Phone: +1(971) 349-6861 </p>
         </section>
     </div>
     <footer class="footer">
