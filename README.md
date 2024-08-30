@@ -48,6 +48,9 @@
             width: 100%;
             bottom: 0;
         }
+        .footer p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +61,10 @@
         <a href="#about">About Us</a>
         <a href="#roles">Roles</a>
         <a href="#events">Events</a>
+        <a href="#updates">Updates</a>
         <a href="#contact">Contact</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeddokVRnRPZlgCl7QTDr-1BNHJhC5BXp4neeCvSi3a-r8_sg/viewform" target="_blank">Sign Up</a>
+        <a href="https://therealcorruption.github.io/A.O.O.-TOS/" target="_blank">Terms Of Service</a>
     </nav>
     <div class="main-content">
         <section id="about" class="section">
@@ -68,7 +74,7 @@
         <section id="roles" class="section">
             <h2>Roles and Structure</h2>
             <ul>
-                <li><strong>Founders:</strong> Andrew, Alex B, [Your Name]</li>
+                <li><strong>Founders:</strong> Andrew, Alex B, Jaidyn Hopkins (Karma)</li>
                 <li><strong>Secretaries:</strong> 4 Positions Available</li>
                 <li><strong>Double Agents:</strong> 3 Positions</li>
                 <li><strong>Members:</strong> Infinite Membership</li>
@@ -85,11 +91,19 @@
                 <li><strong>Gathering:</strong> Social and networking opportunities.</li>
             </ul>
         </section>
+        <section id="updates" class="section">
+            <h2>Update List</h2>
+            <ul>
+                <li><strong>August 2024:</strong> Launched the new member sign-up system.</li>
+                <li><strong>July 2024:</strong> Updated the Terms Of Service with new policies.</li>
+                <li><strong>June 2024:</strong> Introduced new event types for increased engagement.</li>
+            </ul>
+        </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>For any inquiries or to get involved, please contact:</p>
             <p>Email: pumkintrue@gmail.com</p>
-            <p>Phone: +1(971) 349-6861 </p>
+            <p>Phone: 1+(971) 349-6861 (Text, No calling)</p>
         </section>
     </div>
     <footer class="footer">
