@@ -22,12 +22,16 @@
             text-align: center;
             margin-top: 1rem;
             background-color: #333333; /* Dark background for navigation */
+            padding: 0.5rem 0;
         }
         .nav a {
             color: #ffffff; /* White text color for navigation links */
             margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
+        }
+        .nav a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .main-content {
             padding: 2rem;
@@ -102,8 +106,8 @@
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>For any inquiries or to get involved, please contact:</p>
-            <p>Email: pumkintrue@gmail.com</p>
-            <p>Phone: 1+(971) 349-6861 (Text, No calling)</p>
+            <p>Email: <a href="mailto:pumkintrue@gmail.com" style="color: #e0e0e0;">pumkintrue@gmail.com</a></p>
+            <p>Phone: <a href="tel:+19713496861" style="color: #e0e0e0;">1+(971) 349-6861</a></p>
         </section>
     </div>
     <footer class="footer">
