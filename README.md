@@ -11,6 +11,7 @@
             padding: 0;
             background-color: #1e1e1e; /* Dark background for the page */
             color: #e0e0e0; /* Light text color */
+            transition: background-color 1s;
         }
         .header {
             background-color: #121212; /* Darker header background */
@@ -54,6 +55,62 @@
         }
         .footer p {
             margin: 0;
+        }
+        .secret-text {
+            color: white;
+            font-size: 2em;
+            display: none;
+        }
+        .glitch {
+            display: inline-block;
+            position: relative;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+        .glitch:before, .glitch:after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #ff0000;
+            background: black;
+            overflow: hidden;
+            clip: rect(0, 900px, 0, 0);
+        }
+        .glitch:after {
+            color: #0000ff;
+            z-index: -1;
+        }
+        .input-container {
+            margin-top: 20px;
+            display: none;
+        }
+        #name-input {
+            padding: 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #submit-button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #submit-button:hover {
+            background-color: #555;
+        }
+        #user-name-display {
+            font-size: 2.5em;
+            color: white;
+            margin-top: 50px;
+            display: none;
+            text-align: center;
         }
     </style>
 </head>
@@ -115,5 +172,69 @@
     <footer class="footer">
         <p>&copy; 2024 Agency Of Order (AOO). All rights reserved.</p>
     </footer>
+
+    <!-- Hidden elements for secret event -->
+    <div id="secret" class="secret-text">Hello, I am <span class="glitch" data-text="Nexi">Nexi</span>, Who are you?</div>
+    <div class="input-container">
+        <input type="text" id="name-input" placeholder="Enter your name">
+        <button id="submit-button">Submit</button>
+    </div>
+
+    <div id="user-name-display"></div> <!-- Element to display the user's name -->
+
+    <!-- Background music -->
+    <audio id="bg-music" loop>
+        <source src="https://www.youtube.com/embed/Bv5XwI5O7BQ?si=Jq2Xt0AAd0qwTIaO" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Function to trigger the secret event
+        function triggerSecret() {
+            document.body.style.backgroundColor = 'black';
+            document.querySelector('.main-content').style.display = 'none';
+            document.getElementById('secret').style.display = 'block';
+
+            setTimeout(() => {
+                document.querySelector('.input-container').style.display = 'block';
+            }, 10000);
+
+            document.getElementById('bg-music').volume = 0.15;
+            document.getElementById('bg-music').play();
+
+            glitchEffect();
+            setInterval(glitchEffect, 3000);
+        }
+
+        // Function for the glitch effect on Nexi's name
+        function glitchEffect() {
+            const glitch = document.querySelector('.glitch');
+            const originalText = glitch.getAttribute('data-text');
+            const glitchChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+            const randomizeText = () => {
+                glitch.textContent = originalText.split('').map(letter => glitchChars.charAt(Math.floor(Math.random() * glitchChars.length))).join('');
+            };
+
+            const resetText = () => {
+                glitch.textContent = originalText;
+            };
+
+            randomizeText();
+            setTimeout(resetText, 500);
+        }
+
+        // Event listener for user input
+        document.getElementById('submit-button').addEventListener('click', () => {
+            const userName = document.getElementById('name-input').value.trim();
+            if (userName) {
+                document.getElementById('user-name-display').textContent = `Nice to meet you, ${userName}!`;
+                document.getElementById('user-name-display').style.display = 'block';
+            }
+        });
+
+        // Add your desired event to trigger the secret, e.g., click a specific area
+        document.addEventListener('click', triggerSecret);
+    </script>
 </body>
 </html>
